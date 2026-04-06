@@ -593,6 +593,236 @@
       .nav-links {
         display: none;
       }
+
+      .sum-grid2 {
+        grid-template-columns: 1fr;
+      }
+
+      .pr-row {
+        grid-template-columns: 1fr;
+      }
+
+      .pr-no {
+        display: none;
+      }
+    }
+
+    /* ── PROJECT 2: Frontend Team ── */
+    .project-sep {
+      margin: 4rem 0;
+      border: none;
+      border-top: 2px solid var(--border);
+    }
+
+    .highlight-box {
+      background: var(--accent-light);
+      border: 1px solid #b0dfc0;
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+      padding: 18px 22px;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.88rem;
+      color: #2a5a43;
+      line-height: 1.85;
+    }
+
+    .highlight-box strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .cat-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 2rem 0 0.6rem;
+    }
+
+    .cat-bar {
+      width: 18px;
+      height: 2px;
+      border-radius: 1px;
+      flex-shrink: 0;
+    }
+
+    .cat-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--fg2);
+    }
+
+    .pr-list2 {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    .pr-row {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid transparent;
+      border-radius: 4px;
+      padding: 1.1rem 1.2rem;
+      display: grid;
+      grid-template-columns: 44px 1fr auto;
+      gap: 14px;
+      align-items: start;
+      transition: box-shadow 0.2s, transform 0.15s;
+    }
+
+    .pr-row:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transform: translateX(3px);
+    }
+
+    .pr-row.pr-fix {
+      border-left-color: #c0392b;
+    }
+
+    .pr-row.pr-feat {
+      border-left-color: var(--accent);
+    }
+
+    .pr-row.pr-ui {
+      border-left-color: #e67e22;
+    }
+
+    .pr-row.pr-data {
+      border-left-color: var(--accent2);
+    }
+
+    .pr-no {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: #b0aa9a;
+      padding-top: 2px;
+    }
+
+    .pr-ti {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--fg);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .pr-de {
+      font-size: 0.82rem;
+      color: var(--fg2);
+      line-height: 1.75;
+      margin-bottom: 8px;
+    }
+
+    .pr-files {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .ftag {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      padding: 2px 8px;
+      border-radius: 3px;
+      background: #f0f6f2;
+      border: 1px solid #c2dccb;
+      color: var(--accent);
+    }
+
+    .badge {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 3px 10px;
+      border-radius: 100px;
+      white-space: nowrap;
+      text-transform: uppercase;
+    }
+
+    .badge.b-fix {
+      background: #fdf0ef;
+      color: #c0392b;
+      border: 1px solid #f5c6c3;
+    }
+
+    .badge.b-feat {
+      background: var(--accent-light);
+      color: var(--accent);
+      border: 1px solid #b0dfc0;
+    }
+
+    .badge.b-ui {
+      background: #fef6ec;
+      color: #e67e22;
+      border: 1px solid #fad5a5;
+    }
+
+    .badge.b-data {
+      background: #edfaf4;
+      color: #27ae60;
+      border: 1px solid #a8e6c3;
+    }
+
+    .sum-grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 2rem;
+    }
+
+    .sum-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.3rem;
+    }
+
+    .sum-card-title {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.7rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sum-list2 {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sum-list2 li {
+      font-size: 0.82rem;
+      color: var(--fg2);
+      line-height: 1.65;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .sum-list2 li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent2);
+      font-size: 10px;
+      top: 3px;
+    }
+
+    .sum-list2 code {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--accent);
+      background: #f0f6f2;
+      padding: 1px 5px;
+      border-radius: 3px;
     }
   </style>
 </head>
@@ -842,6 +1072,181 @@
             <div class="pr-title">메인 페이지 랜덤 모의고사 카드 배치</div>
             <div class="pr-desc">파스텔 라벤더→스카이 그라디언트, 카테고리 그리드 자동 숨김</div>
           </div>
+        </div>
+      </div>
+
+      <hr class="project-sep">
+
+      <div class="portfolio-hero reveal">
+        <div class="portfolio-badge">🖥️ Team Project · 2024</div>
+        <div class="portfolio-title">be22-3rd-team3-project</div>
+        <div class="portfolio-subtitle">프론트엔드 퀴즈 서비스 — Vue.js 3 기반 퀴즈 생성·진행·결과 플랫폼</div>
+        <div class="portfolio-roles">
+          <div class="role-pill"><span class="icon">🎨</span><span>Frontend Developer — Vue.js UI 구현 &amp; 버그 수정</span>
+          </div>
+          <div class="role-pill"><span class="icon">🔗</span><span><a
+                href="https://github.com/20251029-hanhwa-swcamp-22th/be22-3rd-team3-project/pulls?q=is%3Apr+is%3Aclosed+author%3Achanjin346"
+                target="_blank" style="color:#8bb8a0;text-decoration:none">All PRs →</a></span></div>
+        </div>
+      </div>
+
+      <div class="stats-row reveal">
+        <div class="stat-card"><span class="stat-num">10</span><span class="stat-label">Merged PR</span></div>
+        <div class="stat-card"><span class="stat-num" style="color:#c0392b">5</span><span class="stat-label">Bug
+            Fix</span></div>
+        <div class="stat-card"><span class="stat-num">3</span><span class="stat-label">기능 구현</span></div>
+      </div>
+
+      <div class="highlight-box reveal">
+        퀴즈 게임의 <strong>생성 → 진행 → 결과 전체 플로우</strong>에 걸쳐 프론트엔드 담당.
+        <strong>QuizCreate · QuizGame · QuizResult</strong> 핵심 컴포넌트를 주도적으로 개선하며
+        API 통신 레이어(commonApi.js)와 Pinia 스토어(quiz.js)까지 <strong>프론트엔드 전 계층</strong>을 다뤘습니다.
+      </div>
+
+      <div class="cat-head">
+        <div class="cat-bar" style="background:#c0392b"></div><span class="cat-label">Bug Fix — 사용자 경험 직결 버그 해결</span>
+      </div>
+      <div class="pr-list2 reveal">
+        <div class="pr-row pr-fix">
+          <div class="pr-no">#85</div>
+          <div>
+            <div class="pr-ti">퀴즈 결과 페이지 문제 해결</div>
+            <div class="pr-de">퀴즈 완료 후 결과 페이지가 정상 렌더링되지 않는 문제 수정. API 공통 모듈과 Pinia 스토어의 상태 흐름을 추적하여 데이터 바인딩 오류를 해결.
+            </div>
+            <div class="pr-files"><span class="ftag">commonApi.js</span><span class="ftag">quiz.js</span></div>
+          </div><span class="badge b-fix">Bug Fix</span>
+        </div>
+        <div class="pr-row pr-fix">
+          <div class="pr-no">#53</div>
+          <div>
+            <div class="pr-ti">퀴즈 풀이 결과에서 최종 점수 안보이는 문제 해결</div>
+            <div class="pr-de">QuizGame → QuizResult 컴포넌트 간 점수 데이터 전달의 props/emit 누락 오류 수정. 데이터 흐름 체인 분석으로 근본 원인 해결.
+            </div>
+            <div class="pr-files"><span class="ftag">QuizGame.vue</span><span class="ftag">QuizResult.vue</span><span
+                class="ftag">db.json</span></div>
+          </div><span class="badge b-fix">Bug Fix</span>
+        </div>
+        <div class="pr-row pr-fix">
+          <div class="pr-no">#47</div>
+          <div>
+            <div class="pr-ti">마지막 문제 풀면 11이라고 표시되는 버그 수정</div>
+            <div class="pr-de">10문제 퀴즈 종료 후 번호가 11로 표시되는 off-by-one 버그. QuizGame.vue 카운터 경계 조건 처리 로직 수정.</div>
+            <div class="pr-files"><span class="ftag">QuizGame.vue</span><span class="ftag">db.json</span></div>
+          </div><span class="badge b-fix">Bug Fix</span>
+        </div>
+        <div class="pr-row pr-fix">
+          <div class="pr-no">#72</div>
+          <div>
+            <div class="pr-ti">메인페이지 퀴즈 시간 안나오는 현상 수정</div>
+            <div class="pr-de">퀴즈 목록에서 소요 시간이 표시되지 않는 문제 수정. QuizCreate 저장 방식 및 QuizList 렌더링 조건 수정.</div>
+            <div class="pr-files"><span class="ftag">QuizCreate.vue</span><span class="ftag">QuizList.vue</span><span
+                class="ftag">db.json</span></div>
+          </div><span class="badge b-fix">Bug Fix</span>
+        </div>
+      </div>
+
+      <div class="cat-head">
+        <div class="cat-bar" style="background:var(--accent)"></div><span class="cat-label">Feature — 기능 구현 및 개선</span>
+      </div>
+      <div class="pr-list2 reveal">
+        <div class="pr-row pr-feat">
+          <div class="pr-no">#66</div>
+          <div>
+            <div class="pr-ti">상세결과 화면에서 사진 추가로 보이게 구현</div>
+            <div class="pr-de">퀴즈 상세 결과 화면에 각 문항의 이미지가 함께 표시되도록 기능 구현.</div>
+            <div class="pr-files"><span class="ftag">QuizResult.vue</span><span class="ftag">db.json</span></div>
+          </div><span class="badge b-feat">Feature</span>
+        </div>
+        <div class="pr-row pr-feat">
+          <div class="pr-no">#67</div>
+          <div>
+            <div class="pr-ti">퀴즈 생성 페이지 수정</div>
+            <div class="pr-de">퀴즈 생성 폼 UI/UX 개선. 입력 유효성·저장 흐름 수정, QuizResult.vue와의 연동 구조 및 화면 전환 흐름 정비.</div>
+            <div class="pr-files"><span class="ftag">QuizCreate.vue</span><span class="ftag">QuizResult.vue</span></div>
+          </div><span class="badge b-feat">Feature</span>
+        </div>
+        <div class="pr-row pr-feat">
+          <div class="pr-no">#40</div>
+          <div>
+            <div class="pr-ti">퀴즈 제목 기본값 설정</div>
+            <div class="pr-de">퀴즈 생성 시 제목 미입력 시 기본값 자동 지정 구현. 빈 제목으로 인한 UI 깨짐 방지 및 UX 개선.</div>
+            <div class="pr-files"><span class="ftag">QuizCreate.vue</span></div>
+          </div><span class="badge b-feat">Feature</span>
+        </div>
+      </div>
+
+      <div class="cat-head">
+        <div class="cat-bar" style="background:#e67e22"></div><span class="cat-label">UI Polish — 화면 정제</span>
+      </div>
+      <div class="pr-list2 reveal">
+        <div class="pr-row pr-ui">
+          <div class="pr-no">#74</div>
+          <div>
+            <div class="pr-ti">메인페이지 토탈 시간 삭제</div>
+            <div class="pr-de">기획 변경에 따라 퀴즈 목록의 총 소요시간 표시 요소 제거. QuizList.vue 렌더링 로직 정리.</div>
+            <div class="pr-files"><span class="ftag">QuizList.vue</span><span class="ftag">db.json</span></div>
+          </div><span class="badge b-ui">UI</span>
+        </div>
+      </div>
+
+      <div class="cat-head">
+        <div class="cat-bar" style="background:var(--accent2)"></div><span class="cat-label">Data — 테스트 데이터 생성</span>
+      </div>
+      <div class="pr-list2 reveal">
+        <div class="pr-row pr-data">
+          <div class="pr-no">#82</div>
+          <div>
+            <div class="pr-ti">테스트 데이터 추가</div>
+            <div class="pr-de">개발·QA용 퀴즈 테스트 데이터 추가. 이미지 유무, 문항 수 등 다양한 케이스 시나리오 데이터 작성.</div>
+            <div class="pr-files"><span class="ftag">backend/db.json</span></div>
+          </div><span class="badge b-data">Data</span>
+        </div>
+        <div class="pr-row pr-data">
+          <div class="pr-no">#49</div>
+          <div>
+            <div class="pr-ti">월드컵 새로운 테스트 데이터 추가</div>
+            <div class="pr-de">월드컵 게임 모드 신규 테스트 데이터 작성. 다양한 라운드 구성·이미지 케이스 포함하여 팀원 개발 환경 지원.</div>
+            <div class="pr-files"><span class="ftag">backend/db.json</span></div>
+          </div><span class="badge b-data">Data</span>
+        </div>
+      </div>
+
+      <div class="sum-grid2 reveal">
+        <div class="sum-card">
+          <div class="sum-card-title">문제 해결</div>
+          <ul class="sum-list2">
+            <li>Off-by-one 등 경계 조건 버그 직접 탐지·수정</li>
+            <li>props/emit 흐름 추적으로 화면 오류 근본 원인 해결</li>
+            <li>API 레이어·Pinia 스토어까지 전 계층 디버깅</li>
+            <li>db.json 데이터 정합성까지 함께 검토</li>
+          </ul>
+        </div>
+        <div class="sum-card">
+          <div class="sum-card-title">기능 구현</div>
+          <ul class="sum-list2">
+            <li>퀴즈 생성 → 진행 → 결과 전체 플로우 컴포넌트 개발</li>
+            <li>이미지 렌더링, 기본값 처리 등 UX 직접 개선</li>
+            <li>기획 변경에 빠르게 대응, 불필요 UI 요소 신속 정리</li>
+            <li>QA 효율을 높이는 테스트 데이터 체계적 관리</li>
+          </ul>
+        </div>
+        <div class="sum-card">
+          <div class="sum-card-title">담당 컴포넌트</div>
+          <ul class="sum-list2">
+            <li><code>QuizCreate.vue</code> — 퀴즈 생성 폼</li>
+            <li><code>QuizGame.vue</code> — 게임 진행 상태 관리</li>
+            <li><code>QuizResult.vue</code> — 결과 화면 렌더링</li>
+            <li><code>QuizList.vue</code> — 메인 목록 표시</li>
+            <li><code>commonApi.js / quiz.js</code> — API &amp; Pinia Store</li>
+          </ul>
+        </div>
+        <div class="sum-card">
+          <div class="sum-card-title">협업</div>
+          <ul class="sum-list2">
+            <li>GitHub Flow 기반 10개 PR로 점진적 코드베이스 개선</li>
+            <li>테스트 데이터 작성으로 팀원 개발 환경 지원</li>
+            <li>이슈 트래킹과 PR을 연계하여 작업 이력 투명 관리</li>
+          </ul>
         </div>
       </div>
 
