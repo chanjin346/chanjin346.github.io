@@ -598,38 +598,69 @@
     }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
+      .pr-cards.triple { grid-template-columns: 1fr 1fr; }
+      .stats-row { grid-template-columns: 1fr 1fr; }
+    }
 
+    @media (max-width: 700px) {
+      /* 네비 */
+      .nav-links { display: none; }
+
+      /* 히어로 */
+      .hero h1 { font-size: 3.2rem; }
+      .hero-sub { font-size: 0.95rem; }
+      #hero { padding: 80px 20px 48px; }
+
+      /* 섹션 공통 */
+      #intro, #skills, #portfolio, #contact { padding: 64px 20px; }
+      .section-title { font-size: 2rem; }
+      .container { padding: 0 20px; }
+
+      /* 그리드 → 1열 */
       .intro-grid,
       .skills-grid,
-      .pr-cards {
-        grid-template-columns: 1fr;
-      }
+      .pr-cards,
+      .pr-cards.triple,
+      .sum-grid2 { grid-template-columns: 1fr; }
 
-      .stats-row {
-        grid-template-columns: 1fr 1fr;
-      }
+      /* 스탯 → 2열 */
+      .stats-row { grid-template-columns: 1fr 1fr !important; }
 
-      .img-gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      /* 이미지 갤러리 */
+      .img-gallery { grid-template-columns: repeat(2, 1fr); }
 
-      .nav-links {
-        display: none;
-      }
+      /* 골라보숑 PR row */
+      .pr-row { grid-template-columns: 1fr; }
+      .pr-no { display: none; }
 
-      .sum-grid2 {
-        grid-template-columns: 1fr;
-      }
+      /* 포트폴리오 히어로 */
+      .portfolio-hero { padding: 24px 20px; }
+      .portfolio-title { font-size: 1.4rem; }
+      .portfolio-roles { flex-direction: column; gap: 0.6rem; }
 
-      .pr-row {
-        grid-template-columns: 1fr;
-      }
+      /* PR 카드 */
+      .pr-card { padding: 1rem; }
+      .pr-card-top { flex-wrap: wrap; }
+      .pr-section-title { font-size: 0.68rem; }
 
-      .pr-no {
-        display: none;
-      }
+      /* contact */
+      .contact-card { padding: 1rem 1.2rem; }
+
+      /* 구분선 */
+      .project-sep { margin: 2.5rem 0; }
+
+      /* 타임라인 */
+      .tl-item { grid-template-columns: 56px 1fr; }
     }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 2.4rem; }
+      .stat-num { font-size: 1.6rem; }
+      .portfolio-title { font-size: 1.2rem; }
+      .section-title { font-size: 1.6rem; }
+    }
+
 
     /* ── PROJECT 2: Frontend Team ── */
     .project-sep {
