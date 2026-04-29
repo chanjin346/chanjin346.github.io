@@ -347,6 +347,27 @@
       font-size: 2rem;
       color: #fff;
       margin-bottom: 0.5rem;
+      display: block;
+      text-decoration: none;
+    }
+    .project-github {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.4em 1.2em;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: #fff;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 3px;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: background 0.2s;
+      position: relative;
+    }
+    .project-github:hover {
+      background: rgba(255,255,255,0.22);
+      text-decoration: none;
     }
 
     .portfolio-subtitle {
@@ -1441,10 +1462,10 @@
           CQRS 패턴, JWT 인증, PDF 보고서 생성, Feign 서비스 연동 등 실무 수준의 아키텍처를 적용했습니다.
         </div>
         <div class="portfolio-roles">
-          <div class="role-pill"><span class="icon">🖥</span><span>Frontend — Vue 3 + Tailwind CSS 4개 화면 전담</span></div>
-          <div class="role-pill"><span class="icon">⚙</span><span>Backend — Spring Boot Activity 마이크로서비스 단독 개발</span></div>
-          <div class="role-pill"><span class="icon">🧪</span><span>Testing — TDD 기반 257개 테스트 케이스</span></div>
-          <div class="role-pill"><span class="icon">🚀</span><span>DevOps — Docker + GitHub Actions CI/CD</span></div>
+          <div class="role-pill"><span>Frontend — Vue 3 + Tailwind CSS 4개 화면 전담</span></div>
+          <div class="role-pill"><span>Backend — Spring Boot Activity 마이크로서비스 단독 개발</span></div>
+          <div class="role-pill"><span>Testing — TDD 기반 257개 테스트 케이스</span></div>
+          <div class="role-pill"><span>DevOps — Docker + GitHub Actions CI/CD</span></div>
         </div>
       </div>
       <div class="project-body">
@@ -1452,11 +1473,11 @@
       <!-- Stats -->
       <div class="stats-row reveal" style="grid-template-columns: repeat(4, 1fr);">
         <div class="stat-card">
-          <div class="stat-num">29</div>
+          <div class="stat-num">24</div>
           <div class="stat-label">Frontend PRs</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num">57</div>
+          <div class="stat-num">60</div>
           <div class="stat-label">Backend Commits</div>
         </div>
         <div class="stat-card">
@@ -1556,12 +1577,12 @@
       <!-- Work Log with Tabs -->
       <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:0.5rem;" class="reveal">주요 작업 기록</h3>
       <p class="section-intro reveal">
-        프론트엔드 29개 PR과 백엔드 57회 커밋의 핵심 작업을 정리했습니다.
+        프론트엔드 24개 PR과 백엔드 60회 커밋의 핵심 작업을 정리했습니다.
       </p>
 
       <div class="tab-bar">
-        <button class="tab-btn active" data-tab="frontend">Frontend (PR)</button>
-        <button class="tab-btn" data-tab="backend">Backend (Commit)</button>
+        <button class="tab-btn active" data-tab="frontend">Frontend (24 PRs)</button>
+        <button class="tab-btn" data-tab="backend">Backend (60 Commits)</button>
       </div>
 
       <!-- Frontend Tab -->
@@ -1698,6 +1719,38 @@
             <div>
               <div class="pr-title">활동기록 페이지 버그 수정</div>
               <div class="pr-desc">상세 모달 거래처명 표시, 수정 시 모달 자동 닫기. PO 검색 정상 동작. 재전송 날짜 포맷 로케일 의존 제거, TypeError 방어 처리.</div>
+              <div class="pr-files"><span class="ftag">#176</span><span class="ftag">#171</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cat-head">
+          <div class="cat-bar" style="background:#e67e22"></div>
+          <span class="cat-label">QA 대응 — 백엔드 연동 &amp; 실사용 버그 수정</span>
+        </div>
+        <div class="pr-list reveal">
+          <div class="pr-row pr-fix">
+            <span class="pr-type fix">fix</span>
+            <div>
+              <div class="pr-title">활동기록 CRUD 연동 버그 수정</div>
+              <div class="pr-desc">수정 시 id 누락으로 PUT 요청 실패 수정. 활동 유형 영문→한글 매핑 처리. 우선순위 필드 추가. 중복 요청 방지 (저장 버튼 debounce).</div>
+              <div class="pr-files"><span class="ftag">ActivityListPage.vue</span><span class="ftag">ActivityEditModal.vue</span></div>
+            </div>
+          </div>
+          <div class="pr-row pr-fix">
+            <span class="pr-type fix">fix</span>
+            <div>
+              <div class="pr-title">활동기록 등록 실패 · 작성자 필드 고정</div>
+              <div class="pr-desc">백엔드 JWT 연동 후 등록 시 작성자 ID가 전달되지 않는 문제 해결. 작성자 필드를 로그인 사용자로 자동 고정.</div>
+              <div class="pr-files"><span class="ftag">ActivityCreatePage.vue</span></div>
+            </div>
+          </div>
+          <div class="pr-row pr-fix">
+            <span class="pr-type fix">fix</span>
+            <div>
+              <div class="pr-title">메일 이력 페이지 역순 정렬 · 페이지네이션</div>
+              <div class="pr-desc">최신 발송 건이 상단에 오도록 역순 정렬 적용. 서버사이드 페이지네이션 연동.</div>
+              <div class="pr-files"><span class="ftag">#195</span><span class="ftag">EmailListPage.vue</span></div>
             </div>
           </div>
         </div>
@@ -1842,6 +1895,55 @@
             <div>
               <div class="pr-title">RS256 전환 후 257개 테스트 전체 복구</div>
               <div class="pr-desc">JWT mock 설정 통일, IntegrationTestSupport 공통 베이스 클래스로 표준화</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cat-head">
+          <div class="cat-bar" style="background:#e67e22"></div>
+          <span class="cat-label">Phase 7 — QA 대응 &amp; 배포 안정화</span>
+        </div>
+        <div class="pr-list reveal">
+          <div class="pr-row pr-fix">
+            <span class="pr-type fix">fix</span>
+            <div>
+              <div class="pr-title">ActivityCreateRequest 필수 검증 완화</div>
+              <div class="pr-desc">poId·activityScheduleFrom/To를 @NotNull/@NotBlank에서 선택 필드로 변경. 활동 유형에 따라 일정 기간이 없는 경우(미팅·이슈·메모)에도 저장 가능하도록 수정.</div>
+            </div>
+          </div>
+          <div class="pr-row pr-fix">
+            <span class="pr-type fix">fix</span>
+            <div>
+              <div class="pr-title">ActivityType 대소문자 무관 매핑 허용</div>
+              <div class="pr-desc">ActivityType.from()을 대소문자 무시 + enum name 모두 허용으로 완화. 프론트엔드가 전송하는 한글/영문 혼재 값 파싱 실패 방지.</div>
+            </div>
+          </div>
+          <div class="pr-row pr-fix">
+            <span class="pr-type fix">fix</span>
+            <div>
+              <div class="pr-title">바이어 → 컨택 동기화 중복 저장 방지 (QA Issue #11)</div>
+              <div class="pr-desc">existsByWriterIdAndContactEmail pre-check 추가로 멱등성(Idempotency) 확보. Master 서비스의 재시도 요청으로 인한 컨택 카드 2배 중복 노출 해결.</div>
+            </div>
+          </div>
+          <div class="pr-row pr-fix">
+            <span class="pr-type fix">fix</span>
+            <div>
+              <div class="pr-title">이메일 발송 이력 sentAt NULL 채움 (QA F5)</div>
+              <div class="pr-desc">EmailLogInternalRequest.toEntity()에서 status=SENT일 때 LocalDateTime.now() 기록 누락 수정. 메일 이력 화면 발송일 컬럼 빈 셀 해결. FAILED는 NULL 유지(재전송 UI 구분).</div>
+            </div>
+          </div>
+          <div class="pr-row pr-fix">
+            <span class="pr-type fix">fix</span>
+            <div>
+              <div class="pr-title">Dockerfile 한글 폰트 설치 — PDF 한글 깨짐 해결</div>
+              <div class="pr-desc">eclipse-temurin:21-jre 기본 이미지에 한글 TTF 없음. fonts-nanum + fontconfig 설치로 NanumGothic.ttf 경로 확보. 패키지 PDF 한글 □□□ 깨짐 완전 해결.</div>
+            </div>
+          </div>
+          <div class="pr-row pr-fix">
+            <span class="pr-type fix">fix</span>
+            <div>
+              <div class="pr-title">dev 프로파일 내부 API 토큰 필터 적용</div>
+              <div class="pr-desc">dev 환경에서 InternalApiTokenFilter 미적용으로 /api/contacts/internal 무인증 접근 가능 문제 수정. AuthFeignClient 엔드포인트를 /api/users/internal/{id}로 고정.</div>
             </div>
           </div>
         </div>
@@ -2001,7 +2103,7 @@
         <div class="sum-card">
           <div class="sum-card-title">협업 &amp; DevOps</div>
           <ul class="sum-list">
-            <li>GitHub Flow 기반 29개 PR + 57개 커밋 점진적 구축</li>
+            <li>GitHub Flow 기반 24개 PR + 60개 커밋 점진적 구축</li>
             <li>코드 리뷰 Critical 이슈 30건+ 능동 수정</li>
             <li>Docker + GitHub Actions CI/CD 파이프라인</li>
             <li>투스탭 구현 — UI 먼저, 로직 나중에 팀 합의 준수</li>
@@ -2021,14 +2123,15 @@
         <div class="portfolio-subtitle">일본어 학습 퀴즈 플랫폼 — 퀴즈·오답노트·여행기록·관리자 기능 통합 서비스</div>
         <div class="portfolio-roles">
           <div class="role-pill">
-            <span class="icon">👤</span>
+            
             <span>Backend Developer — 회원 인증 & 보안</span>
           </div>
           <div class="role-pill">
-            <span class="icon">🎨</span>
+            
             <span>Frontend Developer — Vue.js UI/UX 전담</span>
           </div>
         </div>
+        <a href="https://github.com/chanjin346/JapaneseQuizProject" class="project-github" target="_blank" onclick="event.stopPropagation()">GitHub →</a>
       </div>
       <div class="project-body">
 
@@ -2204,12 +2307,12 @@
         <span class="toggle-icon">▼</span>
         <div class="portfolio-badge">Team Project</div>
         <div class="portfolio-title">골라보숑</div>
-        <div class="portfolio-subtitle">프론트엔드 퀴즈 서비스 — Vue.js 3 기반 퀴즈&월드컵 플랫폼</div>
+        <div class="portfolio-subtitle">프론트엔드 이상형 월드컵 및 퀴즈 서비스 — Quiz 서비스 담당</div>
         <div class="portfolio-roles">
-          <div class="role-pill"><span class="icon">🎨</span><span>Frontend Developer — Vue.js UI 구현 &amp; 버그 수정</span>
+          <div class="role-pill"><span>Frontend Developer — Vue.js UI 구현 &amp; 버그 수정</span>
           </div>
-
         </div>
+        <a href="https://github.com/20251029-hanhwa-swcamp-22th/be22-3rd-team3-project" class="project-github" target="_blank" onclick="event.stopPropagation()">GitHub →</a>
       </div>
       <div class="project-body">
 
@@ -2394,12 +2497,11 @@
       <span class="toggle-icon">▼</span>
       <div class="portfolio-badge">Team Project</div>
       <div class="portfolio-title">School Mate</div>
-      <div class="portfolio-subtitle">모놀리식 → MSA 전환 팀 프로젝트 · Course 서비스 단독 담당 · Feign Client 서비스 간 통신 구현</div>
+      <div class="portfolio-subtitle">백엔드 학사 관리 서비스 — Course 서비스 담당</div>
       <div class="portfolio-roles">
-        <div class="portfolio-role">🔧 <span>Course Service</span> — 강좌 도메인 전체 설계 &amp; 구현</div>
-        <div class="portfolio-role">🔐 <span>Spring Security</span> — 역할 기반 권한 설정</div>
-        <div class="portfolio-role">🧪 <span>Test</span> — JUnit 5 서비스 테스트</div>
+        <div class="role-pill"><span>Course Service — 강좌 도메인 전체 설계 &amp; 구현</span></div>
       </div>
+      <a href="https://github.com/20251029-hanhwa-swcamp-22th/be22-2nd-team1-project" class="project-github" target="_blank" onclick="event.stopPropagation()">GitHub →</a>
     </div>
     <div class="project-body">
 
