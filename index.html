@@ -1517,7 +1517,7 @@
       ═══════════════════════════════════ -->
 
       <!-- Project Hero Card -->
-      <div class="portfolio-hero reveal" onclick="toggleProject(this)">
+      <div class="portfolio-hero" onclick="toggleProject(this)">
         <span class="toggle-icon">▼</span>
         <div class="portfolio-badge">Final Team Project</div>
         <div class="portfolio-title">SalesBoost</div>
@@ -2114,7 +2114,7 @@
       <hr class="project-sep">
 
       <!-- JPQuiz -->
-      <div class="portfolio-hero reveal" onclick="toggleProject(this)">
+      <div class="portfolio-hero" onclick="toggleProject(this)">
         <span class="toggle-icon">▼</span>
         <div class="portfolio-badge">Side Project</div>
         <div class="portfolio-title">JPQuiz</div>
@@ -2302,7 +2302,7 @@
 
       <hr class="project-sep">
 
-      <div class="portfolio-hero reveal" onclick="toggleProject(this)">
+      <div class="portfolio-hero" onclick="toggleProject(this)">
         <span class="toggle-icon">▼</span>
         <div class="portfolio-badge">Team Project</div>
         <div class="portfolio-title">골라보숑</div>
@@ -2520,7 +2520,7 @@
     ─────────────────────────────────────  -->
     <hr class="project-sep">
 
-    <div class="portfolio-hero reveal" onclick="toggleProject(this)">
+    <div class="portfolio-hero" onclick="toggleProject(this)">
       <span class="toggle-icon">▼</span>
       <div class="portfolio-badge">Team Project</div>
       <div class="portfolio-title">School Mate</div>
@@ -2828,6 +2828,11 @@
       if (!body) return;
       hero.classList.toggle('open');
       body.classList.toggle('open');
+      // project-body 안의 reveal 요소들은 숨겨진 상태에서 observer가 작동 안 하므로
+      // 토글 열릴 때 강제로 visible 처리
+      if (body.classList.contains('open')) {
+        body.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+      }
     }
 
   </script>
