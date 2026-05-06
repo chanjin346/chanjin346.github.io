@@ -1370,9 +1370,45 @@
       max-height: 3000px;
     }
     @media print {
+      /* 모든 reveal 요소 강제로 보이게 */
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+
+      /* project-body 전부 열기 */
       .project-body {
         max-height: none !important;
         overflow: visible !important;
+      }
+
+      /* portfolio-hero 배경색 인쇄에서도 유지 */
+      .portfolio-hero {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        background: #1a2e23 !important;
+        color: #e0f0e8 !important;
+      }
+
+      /* 포트폴리오 제목 흰색 유지 */
+      .portfolio-title {
+        color: #fff !important;
+      }
+
+      /* toggle-icon 숨기기 (인쇄엔 불필요) */
+      .toggle-icon {
+        display: none !important;
+      }
+
+      /* 네비게이션 숨기기 */
+      nav {
+        display: none !important;
+      }
+
+      /* 라이트박스 숨기기 */
+      #lightbox {
+        display: none !important;
       }
     }
   </style>
@@ -2828,8 +2864,6 @@
       if (!body) return;
       hero.classList.toggle('open');
       body.classList.toggle('open');
-      // project-body 안의 reveal 요소들은 숨겨진 상태에서 observer가 작동 안 하므로
-      // 토글 열릴 때 강제로 visible 처리
       if (body.classList.contains('open')) {
         body.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
       }
